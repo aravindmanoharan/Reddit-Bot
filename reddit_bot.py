@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 # Import all required packages.
-
 import pandas as pd
 import requests
 import json
@@ -13,7 +12,6 @@ categories = ['jokes','personalfinance']
 fmt = '%Y-%m-%d %H:%M:%S'
 
 # Looping through all the categories.
-
 for category in categories:
     print('Collecting data from ' + category)
     users = []          # Collecting usernames who have posted in this category.
