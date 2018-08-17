@@ -9,7 +9,7 @@ from datetime import datetime
 import time
 
 # Enter all the categories for which you need to collect the User information.
-categories = ['jokes','personalfinance','todayilearned']
+categories = ['jokes','personalfinance']
 fmt = '%Y-%m-%d %H:%M:%S'
 
 # Looping through all the categories.
@@ -48,7 +48,7 @@ for category in categories:
                     break
             users.append(i['data']['author'])
             scores.append(i['data']['score'])
-            post_url.append(i['data']['permalink'])
+            post_url.append('www.reddit.com' + i['data']['permalink'])
             posted_time.append(datetime.utcfromtimestamp(int(i['data']['created'])).strftime(fmt))
         
         # Change the URL to next page
